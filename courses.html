@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses – Sure Success College</title>
+    <meta name="description" content="Explore the academic programs and courses offered at Sure Success College.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+            <a href="index.html" class="logo">
+                <img src="/placeholder.svg?height=40&width=40" width="40" height="40" alt="Sure Success College Logo">
+                <span class="text-lg md:text-xl">Sure Success College</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Courses</a>
+                <a href="campuses.html">Campuses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <button id="menu-button" class="menu-button md:hidden" aria-label="Toggle navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="close-menu-button" class="close-button" aria-label="Close navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="campuses.html">Campuses</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container py-12 md:py-24 lg:py-32 px-4 md:px-6">
+            <section class="text-center mb-12 md:mb-16 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Our Academic Programs</h1>
+                <p class="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Explore our diverse range of courses designed to cater to every student&apos;s academic needs and aspirations.
+                </p>
+            </section>
+
+            <!-- Course Search/Filter -->
+            <div class="flex justify-center mb-8 animate-fade-in delay-100">
+                <input type="text" id="course-search" placeholder="Search courses..." class="w-full max-w-md p-3 border rounded-lg focus:outline-none focus:border-primary transition-colors">
+            </div>
+
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 animate-fade-in delay-200" id="course-grid">
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="WASSCE Regular" data-description="Comprehensive preparation for the West African Senior School Certificate Examination, covering all core and elective subjects.">
+                    <img src="public/WAEC-1-1.jpg" width="400" height="250" alt="WASSCE Regular" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">WASSCE Regular</h3>
+                        <p class="card-description text-primary font-medium">1 Academic Year</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Comprehensive preparation for the West African Senior School Certificate Examination, covering all core and elective subjects.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="NOVDEC Remedial (Morning)" data-description="Intensive morning classes designed to help students improve their grades for the November/December WASSCE.">
+                    <img src="public/NovDec-result-checker.jpg" width="400" height="250" alt="NOVDEC Remedial (Morning)" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">NOVDEC Remedial (Morning)</h3>
+                        <p class="card-description text-primary font-medium">6 Months</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Intensive morning classes designed to help students improve their grades for the November/December WASSCE.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="NOVDEC Remedial (Evening)" data-description="Flexible evening classes for working students or those with other commitments, focusing on NOVDEC preparation.">
+                    <img src="public/WAEC.jpg" width="400" height="250" alt="NOVDEC Remedial (Evening)" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">NOVDEC Remedial (Evening)</h3>
+                        <p class="card-description text-primary font-medium">6 Months</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Flexible evening classes for working students or those with other commitments, focusing on NOVDEC preparation.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="Vacation Classes" data-description="Engaging and productive classes during school breaks to revise, catch up, or get ahead in various subjects.">
+                    <img src="public/WhatsApp Image 2025-07-23 at 06.00.00_e6588dee.jpg" width="400" height="250" alt="Vacation Classes" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">Vacation Classes</h3>
+                        <p class="card-description text-primary font-medium">School Holidays</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Engaging and productive classes during school breaks to revise, catch up, or get ahead in various subjects.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="Adult Education / University Prep" data-description="Tailored programs for adult learners and those preparing for university entrance exams or bridging courses.">
+                    <img src="public/Stonebridge-associated-colleges-adult-education-e1558519076687.jpg" width="400" height="250" alt="Adult Education / University Prep" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">Adult Education / University Prep</h3>
+                        <p class="card-description text-primary font-medium">Flexible</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Tailored programs for adult learners and those preparing for university entrance exams or bridging courses.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 course-item" data-name="International Exams (SAT, IELTS, TOEFL)" data-description="Specialized coaching for international standardized tests required for overseas university admissions.">
+                    <img src="public/for-blog.jpg" width="400" height="250" alt="International Exams (SAT, IELTS, TOEFL)" class="rounded-t-lg object-cover w-full h-48">
+                    <div class="card-header">
+                        <h3 class="card-title text-foreground">International Exams (SAT, IELTS, TOEFL)</h3>
+                        <p class="card-description text-primary font-medium">Varies</p>
+                    </div>
+                    <div class="card-content flex-1">
+                        <p class="text-muted-foreground">
+                            Specialized coaching for international standardized tests required for overseas university admissions.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="admissions.html" class="btn btn-secondary w-full">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-6">
+            <div class="flex flex-col items-start gap-4">
+                <a href="index.html" class="logo">
+                    <img src="public/download (1).png" width="50" height="50" alt="Sure Success College Logo">
+                    <span class="text-xl">Sure Success College</span>
+                </a>
+                <p class="text-sm opacity-80">“Your Success, Our Priority.”</p>
+                <div class="flex gap-4 mt-4 social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/><path d="m12 13 2 2 4-4"/><path d="M12 3v10"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="grid gap-2">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Courses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="grid gap-2">
+                <h3>Contact Us</h3>
+                <p class="text-sm opacity-80 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    info@suresuccesscollege.edu.gh
+                </p>
+                <p class="text-sm opacity-80 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/><path d="M12 13V2l4 4"/></svg>
+                    +233505824827 / +233244838530
+                </p>
+                <p class="text-sm opacity-80">Accra, Ghana</p>
+            </div>
+            <div class="grid gap-2">
+                <h3>Newsletter</h3>
+                <p class="text-sm opacity-80">Stay updated with our latest news and offers.</p>
+                <form class="flex gap-2 mt-2 newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container text-center copyright">
+            &copy; 2024 Sure Success College. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+    </button>
+
+    <!-- Lightbox for Gallery (included on all pages for consistency, but only active on gallery.html) -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close">&times;</button>
+            <img id="lightbox-image" src="/placeholder.svg" alt="Enlarged image">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
